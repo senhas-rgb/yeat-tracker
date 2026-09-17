@@ -2,6 +2,7 @@ import React,{useState,useEffect,useRef} from 'react';
 import {createRoot} from 'react-dom/client';
 import {Activity,ArrowUpRight,Search,Radio,Pause,Play,RefreshCw,SlidersHorizontal,Headphones,Globe,Check,ExternalLink,X,Volume2,VolumeX,Wifi,Disc3} from 'lucide-react';
 import {Analytics} from '@vercel/analytics/react';
+import {SpeedInsights} from '@vercel/speed-insights/react';
 import './style.css';
 import './timeline.css';
 import './insights.css';
@@ -90,6 +91,7 @@ function App(){
  <footer><span><Wifi size={13}/>{error?'Cached mode':busy?'Checking sources':`${ok} sources reachable`}</span><span>{clock.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}</span></footer>
  {settings&&<div className="settings" role="dialog" aria-label="Display settings"><div><strong>Display settings</strong><button aria-label="Close settings" onClick={()=>setSettings(false)}><X size={18}/></button></div><label><span>Sound on refresh</span><input type="checkbox" checked={soundEnabled} onChange={toggleSound}/></label><p>Enable sound once per visit. A short chime plays after each successful refresh, even when there are no new posts.</p><label><span>Compact feed</span><input type="checkbox" checked={compact} onChange={e=>setCompact(e.target.checked)}/></label><p>Display preferences stay in this browser.</p></div>}
  <Analytics />
+ <SpeedInsights />
  </div>
 }
 createRoot(document.getElementById('root')).render(<App/>);
