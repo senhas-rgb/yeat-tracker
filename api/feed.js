@@ -1,4 +1,5 @@
 import {getFeed} from '../lib/feed.js';
+import {checkOfficialSite} from '../lib/official-site.js';
 const CACHE_MS=300000;
 let cache; let pending;
 export default async function handler(req,res){
@@ -6,7 +7,8 @@ export default async function handler(req,res){
  try{
  if(!cache || Date.now()-cache.time>CACHE_MS){
  pending ||= getFeed().finally(()=>{pending=undefined});
- const data=await pending;
+	const data=await pending;
+	data.officialSite=await checkOfficialSite();
  cache={time:Date.now(),data};
  }
  res.setHeader('Content-Type','application/json');
