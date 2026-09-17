@@ -9,4 +9,4 @@
 .source-text{min-width:0;text-align:left}.source-text small{display:block;font-size:11px;line-height:1.5;color:#b7a887;margin-top:4px}.source-avatar,.health{flex-shrink:0}.column-status p{margin:0 0 12px;color:#b7a887;font-size:12px;line-height:1.5}
 .feed-columns.single-feed{grid-template-columns:minmax(0,1fr)}.single-feed .post-media img{max-height:520px}.compact .story-title{padding-right:0}
 .publisher-logo{display:block;width:24px;height:24px;object-fit:contain}.source-avatar .publisher-logo{width:17px;height:17px}.publisher-icon{background:#242721}.publisher-icon.reddit{background:#fff;border-color:#444}.source-avatar{flex-shrink:0}
-.story-summary{color:#aeb8a5;font-size:13px;line-height:1.6;margin:-7px 0 18px;max-width:760px}
+.story-description{color:#aeb8a5;font-size:13px;line-height:1.6;margin:-7px 0 18px;max-width:760px}
