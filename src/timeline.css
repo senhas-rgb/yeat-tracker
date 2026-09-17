@@ -12,4 +12,5 @@
 .release-copy strong{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:125px}
 .release-point:hover .release-copy strong{color:var(--lime)}
 .timeline-empty{font-size:12px;color:var(--muted);margin:20px 0}
+.tabs button:last-child{display:none}
 @media(max-width:700px){.release-timeline{margin-bottom:24px}.timeline-heading h2{font-size:22px}.release-point{min-width:190px}}
