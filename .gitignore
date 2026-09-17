@@ -1,0 +1,16 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local Vercel configuration
+.vercel/
+
+# Environment variables and secrets
+.env*
+!.env.example
+
+# Logs
+*.log
+
+# macOS metadata
+.DS_Store
